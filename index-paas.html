@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Uninettuno cloud</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/white.css" id="theme">
+
+        <link rel="stylesheet" href="css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+                <section data-markdown="paas.md" data-separator="^--\n" data-separator-vertical="^---\n"></section>
+            </div>
+		</div>
+
+		<script src="src/head.min.js"></script>
+		<script src="src/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'src/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'src/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'src/notes.js' }
+				]
+			});
+		</script>
+
+	</body>
+</html>
